@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+        <style type="text/css">
+        	.reveal section img { 
+        		background:none; 
+        		border:none; 
+        		box-shadow:none; 
+        	}
+        	.angular{
+        		font-size: 65px;
+        	}
+        	.section{
+        		background:#fff;
+        	}
+        	.angular-list{
+               font-size: 30px;
+        	}
+        	 code {
+			    display: block;
+			    padding: 5px;
+			    word-wrap: normal;
+			}
+			.component{
+              color: red;
+			}
+        </style>
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+       
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+			// <!-- .slide: data-background="#1876d2" -->
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+					<script type="text/template">
+						<!-- .slide: data-background="#fff"  -->
+						<img data-src="./assets/angular-3.svg" width="600px" data-border=none>
+					</script>
+				</section>
+				<section>
+					<section data-background="#fff">
+					<!-- .slide: data-background="#fff"  -->
+					<p class="angular">What is Angular?</p>
+					<!-- <p>After 2 seconds the first fragment will be shown.</p>
+					<p class="fragment">After 10 seconds the next fragment will be shown.</p>
+					<p class="fragment">Now, the fragment is displayed for 2 seconds before the next slide is shown.</p> -->
+				    </section>
+				    <section data-background="#fff">
+				    	<p class="angularFramework" style="font-size: 35px">
+				    		Angular is an open-source and TypeScript-based platform and framework for building client-side web applications as Single Page Applications  
+				    	</p>
+				    </section>
+				</section>
+					<section>
+					<section data-background="#fff">
+					<p class="">Angular version history</p>
+						<ul class="angular-list">
+							<li>Angular 1.0 which is known as AngularJS was released in 2010 by Google</li>
+							<li>Angular 2.0 was released in September 2016</li>
+							<li>Angular 4.0 was released in March 2017</li>
+							<li>Angular 5.0 was released in November 2017</li>
+							<li>Angular 7.0 was released in October 2018</li>
+							<li>Angular 8.0 target release date in May 2019</li>
+						</ul>
+				    </section>
+				    <section data-background="#fff">
+				    	<p class="" style="font-size: 35px">
+				    	  Separate terms should be used for each framework with "AngularJS" referring to the 1.X versions and "Angular" without the "JS" referring to versions 2 and up.
+				    	</p>
+				    </section>
+				</section>
+				<section data-background="#fff">
+					<section>
+						<p class="angular">Why do we need Angular?</p>
+					</section>
+					<section>
+                        <p class="">Benefits of Using Angular</p>
+                        <ul class="angular-list">
+							<li>Gives your apps a clear structure to easily manage your project;</li>
+							<li>Includes a lot of re-usable code;</li>
+							<li>It provides support for most platform and web browsers such as web, mobile, and desktop;</li>
+							<li>Make our apps more testable. </li>
+						</ul>
+					</section>
+				</section>
+			    <section data-background="#fff">
+                       <section>
+                       	    <p class="angular">Architecture of Angular</p>
+                       </section>
+                       <section>
+                       	    <p class="">
+                       	    Main building blocks of an Angular Application</p>
+                       	    <ul class="angular-list" style="width: 900px;">
+								<li >Modules</li>
+								<li>Components</li>
+								<li>Templates</li>
+								<li>Metadata</li>
+								<li>Data binding</li>
+								<li>Directives</li>
+								<li>Services</li>
+								<li>Dependency Injection</li>
+						    </ul>
+                       </section>
+                       <section>
+                       		<p> Angular Module (NgModules)</p>
+                       	 <ul class="angular-list">
+								<li>Help organize an application into cohesive blocks of functionality</li>
+								<li>
+									Every Angular app has a root module.
+								</li>
+								<li>Many Angular libraries are module e.g. FormsModule, HttpModule, RouterModule</li>
+								<li>Many third party libraries are available as Angular modules</li>
+						    </ul>
+                       </section>
+                       <section>
+                       	<p> Angular Module (NgModules)</p>
+                       	<pre>
+                       		 <code style="">
+// app.module.ts
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+@NgModule({
+	declarations: [ AppComponent ],
+	imports: [ BrowserModule, AppRoutingModule ],
+	providers: [],
+	bootstrap: [AppComponent]
+})
+export class AppModule { }
+                               </code>
+                           </pre>
+                       </section>
+                       <section>
+                       	<p> Angular Components</p>
+                       	<img data-src="./assets/component.jpg" data-border=none>
+                       </section>
+                       <section>
+                       	<p> Angular Components</p>
+                       	<pre style="height: 350px">
+                       	    <code>
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+  title = 'angular7-router-demo';
+}
+                       	    </code>
+                       	</pre >   
+                       	<ul style="font-size: 25px; width: 930px;">
+                       		<li>The <span class="component">@Component</span> decorator takes some meta information about the component</li>
+                       		<li><span class="component">selector</span>: It's used to call the component from an HTML</li>
+                       		<li><span class="component">templateUrl</span>: It' used to specify the relative path to an HTML file that will be used as the component's template</li>
+                       		<li><span class="component">styleUrls</span>: It's an array that specifies one or more stylesheets that can be used to style the component's view.</li>
+                       	</ul> 
+                       </section>
+
+				<section>
+					<p>Angular Templates</p>
+					<pre>
+					<code>
+<div style="text-align:center">
+  <h1>
+    {{2 | power: 5}}
+  </h1>
+</div>
+					</code>
+					</pre>
+				</section>
+				<section>
+					<p>Angular Metadata</p>
+					<pre>
+					<code>
+// app.component.ts
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+					</code>
+					</pre>
+					<p style="font-size: 30px;">
+Metadata can be attached to the TypeScript using the decorator.
+@Component is a decorator which makes use of configuration object to create the component and its view.
+					</p>
+					
+				</section>
+				<section>
+					<p>
+						Angular Data building
+					</p>
+					<p>
+						Data building is communication between business logic and views.
+					</p>
+				</section>
+				<section>
+					<p>
+						There are four forms of data binding and they differ in the way the data is flowing.
+					</p>
+					<ul style="font-size: 30px; width: 1050px;">
+						<li>Interpolation: {{ value }}</li>
+						<li>Property binding: [property]=”value”</li>
+						<li>Event binding: (event)=”function”</li>
+						<li>Two-way data binding: [(ngModel)]=”value”</li>
+					</ul>
+				</section>
+				<section>
+					<p>
+						Angular Directives
+					</p>
+					<ul class="angular-list">
+						<li>Component: A component is a directive-with-a-template. A @Component decorator is actually a @Directive decorator extended with template-oriented features.</li>
+						<li>Structural directive: Alter layout by adding, removing, and replacing elements in DOM;</li>
+						<li>Attribute directive: Alter the appearance or behavior of an existing element. </li>
+					</ul>
+				</section>
+				<section>
+					<p>Angular services</p>
+					<ul class="angular-list">
+						<li> The mechanism used to share functionalities over components</li>
+						<li>Services are used to achieve DRY and separation of concerns into an Angular application</li>
+						<li>A services are injected using DI mechanism</li>
+						<li>For example: data service, logging sevice, app configuration</li>
+					</ul>
+				</section>
+				<section>
+					<p>
+						Dependency Injection (DI)
+					</p>
+					<ul class="angular-list">
+						<li>Dependency Injection (DI) is a way to create objects that depend on the other objects.</li>
+						<li> A way to supply a new instance of a class with the fully-formed dependencies it rewuires.</li>
+						<li>Most dependencies are services </li>
+						<li>Angular uses dependency injection to provide new component with the services they need</li>
+					</ul>
+				</section>
+				<section>
+					<p>
+					Together a component and template define an Angular view.			
+					</p>
+					<img src="./assets/overview2.png" width="1200">
+				</section>
+              </section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				width: "70%",
+				//height: "70%",
+				margin: 0,
+				minScale: 1,
+				maxScale: 1,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
